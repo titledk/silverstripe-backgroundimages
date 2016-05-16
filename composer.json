@@ -15,7 +15,7 @@
         }
     ],
     "extra": {
-        "installer-name": "backgroundimages",
+        "installer-name": "backgroundimages"
     },
     "require": {
         "silverstripe/framework": "^3.1"
