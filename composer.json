@@ -18,6 +18,7 @@
         "installer-name": "backgroundimages"
     },
     "require": {
+        "titledk/silverstripe-identity": "*",
         "silverstripe/framework": "^3.1"
     },
     "support": {
