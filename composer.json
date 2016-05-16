@@ -18,6 +18,7 @@
         "installer-name": "backgroundimages"
     },
     "require": {
+        "jonom/focuspoint": "*",
         "titledk/silverstripe-identity": "*",
         "silverstripe/framework": "^3.1"
     },
