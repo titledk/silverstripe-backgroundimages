@@ -23,3 +23,11 @@ public function getBackgroundCSS()
 <div style="$BackgroundCSS">
 </div>
 ```
+
+```yml
+Identity:
+  colors:
+    primary: '#111'
+    primary-gradient-start: '#222'
+    primary-gradient-end: '#333'
+```
