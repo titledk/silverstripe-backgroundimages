@@ -22,5 +22,6 @@
     },
     "support": {
         "issues": "https://github.com/titledk/silverstripe-backgroundimages/issues"
-    }
+    },
+    "license": "MIT",
 }
