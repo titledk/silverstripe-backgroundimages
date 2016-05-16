@@ -1,0 +1,26 @@
+{
+    "name": "titledk/silverstripe-backgroundimages",
+    "description": "Define background image based on images that your users upload (WIP)",
+    "type": "silverstripe-module",
+    "homepage": "https://github.com/titledk/silverstripe-backgroundimages",
+    "keywords": [
+        "silverstripe",
+        "images",
+        "background"
+    ],
+    "authors": [
+        {
+            "name": "Anselm Christophersen",
+            "email": "ac@anselm.dk"
+        }
+    ],
+    "extra": {
+        "installer-name": "backgroundimages",
+    },
+    "require": {
+        "silverstripe/framework": "^3.1"
+    },
+    "support": {
+        "issues": "https://github.com/titledk/silverstripe-backgroundimages/issues"
+    }
+}
