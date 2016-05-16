@@ -1,6 +1,8 @@
 # SilverStripe Background Images
 
-This module allows you define background image based on images that your users upload
+Define background image based on images that your users upload.
+
+**WORK IN PROGRESS**
 
 ## Usage
 
