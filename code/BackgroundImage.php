@@ -22,9 +22,18 @@ class BackgroundImage extends Object
     }
 
     /**
+     * @return mixed
+     */
+    public function getStyle()
+    {
+        return $this->style;
+    }
+
+    /**
      * @return string
      */
-    public function getCSS() {
+    public function getCSS()
+    {
         return $this->style->getCSS();
     }
 
@@ -34,7 +43,8 @@ class BackgroundImage extends Object
      *
      * @return string
      */
-    public function getCSSDarkened() {
+    public function getCSSDarkened()
+    {
         return $this->style->getCSSDarkened();
     }
 }
