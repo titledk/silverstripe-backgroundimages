@@ -2,7 +2,6 @@
 
 Define background image based on images that your users upload.
 
-**WORK IN PROGRESS**
 
 ## Usage
 
