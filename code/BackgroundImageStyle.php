@@ -17,8 +17,7 @@ class BackgroundImageStyle extends Object
     protected $image;
 
     /**
-     * BackgroundImageBaseStyle constructor.
-     *
+     * BackgroundImageBaseStyle constructor
      * @param $image
      */
     public function __construct($image)
@@ -27,27 +26,48 @@ class BackgroundImageStyle extends Object
     }
 
     /**
+     * Returns an image, if it has been set
+     * @return null|Image
+     */
+    public function getImage()
+    {
+        $img = $this->image;
+        if ($img && $img->exists()) {
+            return $img;
+        }
+    }
+
+    /**
+     * Returns a scaled image, if an image has been set
+     * @return null|Image
+     */
+    public function getScaledImage()
+    {
+        $img = $this->getImage();
+        if ($img) {
+            return $img->ScaleMaxWidth($this->config()->img_maxwidth);
+        }
+    }
+
+
+    /**
      * CSS for the background image
      * @param bool $withComma
      * @return string
      */
     public function getBackgroundImageCSS($withComma = true)
     {
-        $img = $this->image;
+        $img = $this->getScaledImage();
         if ($img) {
-            $rImg = $img->ScaleMaxWidth($this->config()->img_maxwidth);
-            if ($rImg && $rImg->exists()) {
-
-                $str = '';
-                if ($withComma) {
-                    $str .= ',';
-                }
-                $str .=
-                    "url({$rImg->Link()}) " .
-                    "{$img->PercentageX()}% {$img->PercentageY()}%;" .
-                    "background-size: cover;";
-                return $str;
+            $str = '';
+            if ($withComma) {
+                $str .= ',';
             }
+            $str .=
+                "url({$img->Link()}) " .
+                "{$img->PercentageX()}% {$img->PercentageY()}%;" .
+                "background-size: cover;";
+            return $str;
         }
     }
 
