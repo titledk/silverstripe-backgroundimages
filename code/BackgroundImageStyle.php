@@ -11,7 +11,9 @@ class BackgroundImageStyle extends Object
 {
     private static $gradient_start_opacity = '0.8';
     private static $gradient_end_opacity = '0.2';
-    
+    private static $img_maxwidth = 1000;
+
+
     protected $image;
 
 
@@ -34,9 +36,7 @@ class BackgroundImageStyle extends Object
     {
         $img = $this->image;
         if ($img) {
-            //$img = $img->ScaleMaxWidth(1000);
-            //ScaleMaxWidth doesn't exist in 3.1
-            $rImg = $img->SetWidth(1000);
+            $rImg = $img->ScaleMaxWidth($this->config()->img_maxwidth);
             if ($rImg && $rImg->exists()) {
 
                 $str = '';
@@ -83,5 +83,5 @@ class BackgroundImageStyle extends Object
             ;
     }
 
-    
+
 }
